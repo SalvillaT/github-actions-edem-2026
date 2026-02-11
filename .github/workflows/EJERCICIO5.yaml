@@ -1,0 +1,11 @@
+name: Ejercicio 5
+on:
+  push:
+    branches: [develop]
+    paths: ['docs/**']
+
+jobs:
+  aviso:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Documentación actualizada en develop"

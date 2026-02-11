@@ -1,0 +1,22 @@
+name: Ejercicio 4
+on: 
+  workflow_dispatch:
+
+jobs:
+  origen:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Secreto" > data.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: buzon
+          path: data.txt
+
+  destino:
+    needs: origen
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: buzon
+      - run: cat data.txt
