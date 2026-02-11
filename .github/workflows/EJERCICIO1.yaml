@@ -1,0 +1,17 @@
+name: Ejercicio 1
+on: 
+  workflow_dispatch:
+
+env:
+  TEXTO: "Hola Mundo"
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ env.TEXTO }}
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ env.TEXTO }}

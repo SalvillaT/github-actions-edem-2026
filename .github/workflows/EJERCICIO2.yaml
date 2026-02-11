@@ -1,0 +1,9 @@
+name: Ejercicio 2
+on: 
+  workflow_dispatch:
+
+jobs:
+  login-falso:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Logueando usuario con clave ${{ secrets.MI_CLAVE }}"

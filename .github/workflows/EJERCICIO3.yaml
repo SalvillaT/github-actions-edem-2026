@@ -1,0 +1,13 @@
+name: Ejercicio 3
+on: 
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: ["3.11", "3.12", "3.13"]
+
+    steps:
+      - run: echo "Simulando test con Python ${{ matrix.version }}"
