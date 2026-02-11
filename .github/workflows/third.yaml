@@ -1,0 +1,13 @@
+name: Welcome 3 
+on:
+  workflow_dispatch:
+    inputs:
+      thename:
+        description: 'Whats your name???'
+        required: true
+jobs:
+  say_hello:
+    name: "Lets great the user"
+    runs-on: ubuntu:latest
+    steps:
+      - run: echo "Hello maquinista ${{inputs.thename}}"
